@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="./styles.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="left"></div>
+      <div class="right">
+        <div id="input-data">
+          <form
+            action=""
+            class="my-input"
+            onsubmit="return false;"
+          >
+            <div id="the">
+              <label for="name">Cardholder Name</label> <br />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder=" e.g. Jane Appleseed"
+                required
+              /><br />
+              <label for="number"> Card Number</label> <br />
+              <input
+                type="tel"
+                id="number"
+                name="number"
+              pattern="[A-Za-z]{3}"
+                maxlength="19"
+                placeholder="e.g. 1234 5678 9123 0000"
+                required
+              /><br />
+              <div class="date">
+                <span class="dater">
+                  <label for="date"> Exp. Date (MM/YY)</label> <br />
+                  <input
+                    type="tel"
+                    id="month"
+                    name="date"
+                    maxlength="2"
+                    placeholder="MM"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    id="year"
+                    name="date"
+                    maxlength="2"
+                    placeholder="YY"
+                    required
+                  />
+                </span>
+                <span class="cvc">
+                  <label for="cvc">CVC</label> <br />
+                  <input
+                    type="tel"
+                    id="cvc"
+                    name="cvc"
+                    maxlength="3"
+                    placeholder="e.g. 123"
+                    required
+                  />
+                </span>
+              </div>
+              <input
+                type="submit"
+                value="Confirm"
+                id="submit"
+              />
+            </div>
+            <div
+              id="thank"
+              class="thank"
+            >
+              <div class="check">
+                <svg
+                  width="80"
+                  height="80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="40"
+                    cy="40"
+                    r="40"
+                    fill="url(#a)"
+                  />
+                  <path
+                    d="M28 39.92 36.08 48l16-16"
+                    stroke="#fff"
+                    stroke-width="3"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="a"
+                      x1="-23.014"
+                      y1="11.507"
+                      x2="0"
+                      y2="91.507"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#6348FE" />
+                      <stop
+                        offset="1"
+                        stop-color="#610595"
+                      />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h1>Thank you!</h1>
+              <p>We've added your card details</p>
+              <input
+                type="submit"
+                value="Continue"
+                id="submit"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="card">
+        <div class="front">
+          <img
+            src="./images/bg-card-front.png"
+            alt=""
+          />
+          <div id="card-details">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div id="card-number">0000 0000 0000 0000</div>
+            <div class="card-names">
+              <div id="card-name">Jane Appleseed</div>
+              <div class="card-date">
+                <span id="card-month">00</span>/ <span id="card-year">00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <img
+            src="./images/bg-card-back.png"
+            alt=""
+          />
+          <div id="card-cvc">000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Completed state start -->
+
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+
+      <script src="./app.js"></script>
+    </div>
+  </body>
+</html>

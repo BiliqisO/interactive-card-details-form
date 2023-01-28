@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+#container{
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+.left{
+    width: 30%;
+    background: url(./images/bg-main-desktop.png);
+}
+input{
+    padding: 10px 8px; 
+    width: 100%;
+    margin: 10px 0; 
+    border: 1px solid hsl(270, 3%, 87%);
+}
+input::placeholder{
+    font-size: 1.1rem;
+}
+input:required:valid{
+    border: 1px solid hsl(270, 3%, 87%);
+}
+input:required:invalid{
+    border: 1px solid red;
+}
+input:invalid::after{
+    content: "Wrong format, Nnumbers only";
+}
+.right{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+
+
+}
+#card{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    gap: 40px;
+    display: grid;
+}
+.back{
+    padding-left: 100px;
+    position: relative;
+}
+#card-cvc{
+    position: absolute;
+    top: 110px;
+    right: 60px;
+    color: white;
+}
+.front{
+    position: relative;
+    margin-right: 0px;
+}
+#card-number{
+    position: absolute;
+    bottom: 90px;
+    left: 40px;
+    font-size: 2rem;
+    color: white;
+}
+.card-names{
+position: absolute;
+bottom: 40px;
+left: 40px;
+width: 65%;
+display: flex;
+justify-content: space-between;
+color: white;
+text-transform: uppercase;
+
+}
+.circle1{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    color: white;
+    top: 20px;
+    left: 40px;
+    display: block;
+}
+.circle2{
+    position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid white;
+        top: 35px;
+        left: 120px;
+}
+#submit{
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+form{
+position: absolute;
+right: 20%;
+top: 30%;
+    width: 400px;
+
+}
+.date{
+    display: flex;
+
+    justify-content: space-between;
+
+}
+#month, #year{
+    width: 90px;
+}
+#cvc{
+    width: 200px;
+
+
+}
+#the{
+display: block;
+
+}
+#thank{
+display: none;
+
+}
+.thank *{
+   margin: 15px auto;
+   text-align: center;
+}
+.check{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+}
+@media only screen and   (max-width: 750px) {
+
+    #container{
+    height: auto;
+    flex-direction: column;
+    width: 100%;
+    }
+    .left{
+        height: 500px;
+        width: 100%;
+        background: url(./images/bg-main-desktop.png) repeat contain fixed;
+        
+    }
+    #card{
+        left: 10%;
+        top: 180px;
+        display: block;
+        width: 100%;
+    }
+    .front{
+    z-index: 1;
+    }
+    .back{
+        position: absolute; 
+        top: -150px;
+    }
+    
+}
